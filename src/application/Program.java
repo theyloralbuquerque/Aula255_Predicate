@@ -2,7 +2,6 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 import entities.Product;
 
@@ -19,9 +18,7 @@ public class Program {
 
 		double min = 100.0;
 
-		Predicate<Product> pred = p -> p.getPrice() >= min; // Expressão lambda.
-
-		list.removeIf(pred); // removeIf() vai percorrer toda a list removendo elementos que tenham preço maior que 100, assim como pred diz.
+		list.removeIf(p -> p.getPrice() >= min); // Expressão lambda direto dentro do removeIf().
 
 		for (Product p : list) {
 			System.out.println(p);
