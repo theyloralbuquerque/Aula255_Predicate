@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
-import util.ProductPredicate;
 
 public class Program {
 
@@ -17,7 +16,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
-		list.removeIf(new ProductPredicate()); // removeIf() vai percorrer toda a Lista instanciando a classe ProductPredicate a cada objeto da Lista.
+		list.removeIf(Product::staticProductPredicate); // removeIf() vai percorrer toda a Lista chamando o método staticProductPredicate.
 
 		for (Product p : list) {
 			System.out.println(p);
