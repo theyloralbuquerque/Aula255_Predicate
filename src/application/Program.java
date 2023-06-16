@@ -16,7 +16,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
-		list.removeIf(Product::staticProductPredicate); // removeIf() vai percorrer toda a Lista chamando o método staticProductPredicate.
+		list.removeIf(Product::nonStaticProductPredicate); // removeIf() vai percorrer toda a Lista chamando o método nonStaticProductPredicate.
 
 		for (Product p : list) {
 			System.out.println(p);

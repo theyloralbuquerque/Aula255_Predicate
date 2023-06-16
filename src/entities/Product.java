@@ -29,6 +29,11 @@ public class Product {
 	public static boolean staticProductPredicate(Product p) { // Método static que irá fazer o papel do contrato da interface Predicate.
 		return p.getPrice() >= 100.0;
 	}
+	
+	public boolean nonStaticProductPredicate() { // Método não static que irá fazer o papel do contrato da interface Predicate.
+		return price >= 100.0;
+	}
+	
 	@Override
 	public String toString() {
 		return name + ", " + String.format("%.2f", price);
